@@ -5,7 +5,7 @@ import Transaction from '../components/Transaction.vue'
 import Login from '../components/Login.vue'
 const routes = [
   {
-    path:'/',
+    path:'/home',
     name:'home',
     component:Home
   },
@@ -20,7 +20,7 @@ const routes = [
     component:Transaction
   },
   {
-    path:'/login',
+    path:'/',
     name:'login',
     component:Login
   }

@@ -13,7 +13,7 @@
     </div>
     <div class="flex flex-row justify-between items-center p-2">
         <div class="w-[30%] flex justify-center"><a href="/profile" class="text-center hover:text-white bg-hussam hover:bg-opacity-95 w-full p-2 shadow-sm rounded-xl text-white">Profile</a></div>
-        <div class="w-[30%] flex justify-center"><a href="/" class="text-center bg-hussam hover:bg-opacity-95 w-full p-2 hover:text-white rounded-xl shadow-sm text-white">Logout</a></div>
+        <div class="w-[30%] flex justify-center"><a href="/home" class="text-center bg-hussam hover:bg-opacity-95 w-full p-2 hover:text-white rounded-xl shadow-sm text-white">Logout</a></div>
     </div>
 </div>
 <div :class="[options?'bg-gray-50 p-4 z-20 absolute top-[50px] left-[400px] h-[400px] w-[450px]':'hidden' ]">
@@ -56,7 +56,7 @@
                   <img :src="img">
               </div>
               <div class="w-[45%] flex flex-row items-center text-white text-xl">
-                  <div class="mx-4"><a href="/" :class="[currentRouteName?'cursor-pointer border-b-2 border-red-500':'cursor-pointer']">Home</a></div>
+                  <div class="mx-4"><a href="/home" :class="[currentRouteName?'cursor-pointer border-b-2 border-red-500':'cursor-pointer']">Home</a></div>
                   <div class="mx-4"><a  href="/transaction" class="cursor-pointer">Transactions</a></div>
                   <div class="flex flex-row items-center mx-4">
                       <div><img :src="img2"   @click="opens()"></div>

@@ -8,7 +8,7 @@
               <div>
                   <div class="flex justify-center my-[50px]"><p class="text-4xl font-bold">LOGIN</p></div>
                   <div class="flex justify-center my-[30px]"><input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5" placeholder="Enter Your Username"></div>
-                  <div class="flex justify-center my-[30px]"><a href="/" class="bg-hussam cursor-pointer hover:bg-opacity-95 rounded-lg text-center text-white p-1 w-[130px]">Login</a></div>
+                  <div class="flex justify-center my-[30px]"><a href="/home" class="bg-hussam cursor-pointer hover:bg-opacity-95 rounded-lg text-center text-white p-1 w-[130px]">Login</a></div>
               </div>
           </div>
           </div>

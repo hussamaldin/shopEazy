@@ -9,7 +9,7 @@
     </div>
     <div class="flex flex-row justify-between items-center p-2">
         <div class="w-[30%] flex justify-center"><a href="/profile" class="text-center hover:text-white bg-hussam shadow-sm hover:bg-opacity-95 w-full p-2 rounded-sm text-white">Profile</a></div>
-        <div class="w-[30%] flex justify-center"><a href="/" class="text-center bg-hussam hover:bg-opacity-95 w-full p-2 shadow-sm hover:text-white rounded-sm text-white">Logout</a></div>
+        <div class="w-[30%] flex justify-center"><a href="/home" class="text-center bg-hussam hover:bg-opacity-95 w-full p-2 shadow-sm hover:text-white rounded-sm text-white">Logout</a></div>
     </div>
 </div>
   <div class="w-full h-full">
