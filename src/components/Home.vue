@@ -103,6 +103,7 @@ data(){
         send:false,
         success:false,
          imgg:require('../assets/component.png'),
+         img:require('../assets/ssyp.png'),
         img2:require('../assets/ava.png'),
         img3:require('../assets/curruncy.png'),
         img4:require('../assets/success.png'),

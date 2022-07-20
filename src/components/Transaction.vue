@@ -15,7 +15,7 @@
             <div class="w-full flex justify-center items-center h-[180px] top-0 hass">
           <div class="flex flex-row justify-between w-[80%] items-center">
               <div class="w-[200px]">
-                  <img :src="img">
+                  <img :src="img1">
               </div>
               <div class="w-[45%] flex flex-row items-center text-white text-xl">
                   <div class="mx-4"><a href="/home" class="cursor-pointer">Home</a></div>
@@ -148,6 +148,7 @@ data(){
     return{
         open:false,
         img:require('../assets/component.png'),
+        img1:require('../assets/ssyp.png'),
         img2:require('../assets/component.png')
     }
 },
