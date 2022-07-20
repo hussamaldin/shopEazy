@@ -32,7 +32,7 @@
       <div class="w-[50%] my-4">
       <div class="flex justify-center my-[60px]">
           <div class="flex flex-row items-center">
-              <div class="mx-2"><img :src="img"></div>
+              <div class="mx-2"><img :src="img3"></div>
               <div class="mx-2 text-4xl text-gray-400">Transactions</div>
           </div>
       </div>
@@ -149,7 +149,8 @@ data(){
         open:false,
         img:require('../assets/component.png'),
         img1:require('../assets/ssyp.png'),
-        img2:require('../assets/component.png')
+        img2:require('../assets/component.png'),
+        img3:require('../assets/tra.png')
     }
 },
 computed: {
