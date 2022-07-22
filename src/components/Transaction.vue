@@ -2,7 +2,7 @@
 <div @click="greet" :class="[open?'w-full h-full fixed z-10 overflow-y-auto bg-opacity-50 bg-gray-600':'hidden']">
 
 </div>
-<div :class="[open?'absolute z-20 flex bg-gray-200  flex-col top-[200px] right-[200px] w-[280px] h-[220px]':'hidden']">
+<div :class="[open?'absolute z-20 flex bg-gray-200  flex-col top-[20%] right-[10%] ph:w-[250px] md:w-[310px] h-[230px]':'hidden']">
     <div class="w-full has h-[80%] flex flex-col justify-center items-center">
         <div><img :src="img"></div>
         <div class="text-white">User Name</div>
@@ -12,16 +12,16 @@
         <div class="w-[30%] flex justify-center"><a href="/" class="bg-hussam text-center hover:bg-opacity-95 w-full p-2 hover:text-white rounded-sm shadow-sm text-white">Logout</a></div>
     </div>
 </div>
-            <div class="w-full flex justify-center items-center h-[180px] top-0 hass">
-          <div class="flex flex-row justify-between w-[80%] items-center">
-              <div class="w-[200px]">
+            <div class="md:w-full ph:w-full flex justify-center items-center h-[180px] top-0 hass">
+          <div class="flex flex-row justify-between md:w-[80%] sm:w-[90%] ph:w-[95%] items-center">
+              <div class="ph:w-[20%] md:w-[30%] sm:w-[40%]">
                   <img :src="img1">
               </div>
-              <div class="w-[45%] flex flex-row items-center text-white text-xl">
-                  <div class="mx-4"><a href="/home" class="cursor-pointer">Home</a></div>
-                  <div class="mx-4"><a href="/transaction" :class="[currentRouteName?'cursor-pointer border-b-2 border-red-500':'cursor-pointer']">Transactions</a></div>
-                  <div class="flex flex-row items-center mx-4">
-                      <div><img :src="img2"   @click="opens()"></div>
+              <div class="ph:w-[75%] sm:w-[55%] md:w-[38%] flex flex-row items-center text-white text-xl">
+                  <div class="ph:mx-1 sm:mx-4 md:mx-4 md:text-xl sm:text-lg ph:text-sm"><a href="/home" class="cursor-pointer">Home</a></div>
+                  <div class="ph:mx-3 sm:mx-4 md:mx-4 md:text-xl sm:text-lg ph:text-sm"><a href="/transaction" :class="[currentRouteName?'cursor-pointer border-b-2 border-red-500':'cursor-pointer']">Transactions</a></div>
+                  <div class="flex flex-row items-center ph:mx-1 sm:mx-4 md:mx-4 md:text-xl sm:text-lg ph:text-sm">
+                      <div class="ph:w-[40px] md:w-[60px]"><img :src="img2"   @click="opens()"></div>
                       <div class="mx-2"><a>Username</a></div>
                   </div>
               </div>
@@ -29,16 +29,16 @@
       </div>
 
        <div class="w-full h-full bg-gray-100 flex justify-center items-center">
-      <div class="w-[50%] my-4">
+      <div class="ph:w-[90%] md:w-[50%] my-4">
       <div class="flex justify-center my-[60px]">
           <div class="flex flex-row items-center">
-              <div class="mx-2"><img :src="img3"></div>
-              <div class="mx-2 text-4xl text-gray-400">Transactions</div>
+              <div class="ph:mx-1 md:mx-2"><img class="ph:w-[80px] md:w-[110px]" :src="img3"></div>
+              <div class="ph:mx-1 md:mx-2 text-gray-400 ph:text-2xl md:text-3xl">Transactions</div>
           </div>
       </div>
       <div class="w-full h-auto bg-white p-4">
           <div class="flex justify-center mb-4">
-                  <div class="relative w-[50%] rounded-full">
+                  <div class="relative ph:w-[70%] md:w-[50%] rounded-full">
         <div class="flex absolute cursor-pointer inset-y-0 right-0 items-center pr-3 pointer-events-none">
             <i class="fa fa-search "></i>
         </div>
@@ -46,91 +46,91 @@
     </div>
           </div>
 <div class="overflow-x-auto relative">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase dark:bg-gray-700 dark:text-gray-400">
+    <table class="w-full ph:text-xs md:text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-center text-gray-700 uppercase">
             <tr>
-                <th scope="col" class="py-3 px-6">
+                <th scope="col" class="py-3 ph:px-2 md:px-6">
                     From
                 </th>
-                <th scope="col" class="py-3 px-6">
+                <th scope="col" class="py-3 ph:px-2 md:px-6">
                     To
                 </th>
-                <th scope="col" class="py-3 px-6">
+                <th scope="col" class="py-3 ph:px-2 md:px-6">
                     Balance
                 </th>
-                <th scope="col" class="py-3 px-6">
+                <th scope="col" class="py-3 ph:px-2 md:px-6">
                     Date
                 </th>
             </tr>
         </thead>
         <tbody>
-            <tr class="bg-white">
-                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+            <tr class="bg-white text-center">
+                <th scope="row" class="py-4 ph:px-2 md:px-6 font-medium text-gray-900 whitespace-nowrap">
                     OX
                 </th>
-                <td class="py-4 px-6">
+                <td class="py-4 ph:px-2 md:px-6">
                     XO
                 </td>
-                <td class="py-4 px-6">
+                <td class="py-4 ph:px-2 md:px-6">
                     0.0000000
                 </td>
-                <td class="py-4 px-6">
+                <td class="py-4 ph:px-2 md:px-6">
                     July 6 ,2022
                 </td>
             </tr>
-            <tr class="bg-white ">
-                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+            <tr class="bg-white text-center">
+                <th scope="row" class="py-4 ph:px-2 md:px-6 font-medium text-gray-900 whitespace-nowrap">
                     OX
                 </th>
-                <td class="py-4 px-6">
+                <td class="py-4 ph:px-2 md:px-6">
                     XO
                 </td>
-                <td class="py-4 px-6">
+                <td class="py-4 ph:px-2 md:px-6">
                     0.0000000
                 </td>
-                <td class="py-4 px-6">
+                <td class="py-4 ph:px-2 md:px-6">
                    July 6 ,2022
                 </td>
             </tr>
-            <tr class="bg-white dark:bg-gray-800">
-                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+            <tr class="bg-white text-center">
+                <th scope="row" class="py-4 ph:px-2 md:px-6 font-medium text-gray-900 whitespace-nowrap">
                     OX
                 </th>
-                <td class="py-4 px-6">
+                <td class="py-4 ph:px-2 md:px-6">
                      XO
                 </td>
-                <td class="py-4 px-6">
+                <td class="py-4 ph:px-2 md:px-6">
                    0.0000000
                 </td>
-                <td class="py-4 px-6">
+                <td class="py-4 ph:px-2 md:px-6">
                     July 6 ,2022
                 </td>
             </tr>
-                        <tr class="bg-white dark:bg-gray-800">
-                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <tr class="bg-white text-center">
+                <th scope="row" class="py-4 ph:px-2 md:px-6 font-medium text-gray-900 whitespace-nowrap">
                     OX
                 </th>
-                <td class="py-4 px-6">
+                <td class="py-4 ph:px-2 md:px-6">
                      XO
                 </td>
-                <td class="py-4 px-6">
+                <td class="py-4 ph:px-2 md:px-6">
                    0.0000000
                 </td>
-                <td class="py-4 px-6">
+                <td class="py-4 ph:px-2 md:px-6">
                     July 6 ,2022
                 </td>
             </tr>
-                        <tr class="bg-white dark:bg-gray-800">
-                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <tr class="bg-white text-center">
+                <th scope="row" class="py-4 ph:px-2 md:px-6 font-medium text-gray-900 whitespace-nowrap">
                     OX
                 </th>
-                <td class="py-4 px-6">
+                <td class="py-4 ph:px-2 md:px-6">
                      XO
                 </td>
-                <td class="py-4 px-6">
+                <td class="py-4 ph:px-2 md:px-6">
                    0.0000000
                 </td>
-                <td class="py-4 px-6">
+                <td class="py-4 ph:px-2 md:px-6">
                     July 6 ,2022
                 </td>
             </tr>

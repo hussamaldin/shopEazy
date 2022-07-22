@@ -2,7 +2,7 @@
 <div @click="greet" :class="[open?'w-full h-full fixed z-10 overflow-y-auto bg-opacity-50 bg-gray-600':'hidden']">
 
 </div>
-<div :class="[open?'absolute z-20 flex bg-gray-200  flex-col top-[200px] right-[200px] w-[280px] h-[220px]':'hidden']">
+<div :class="[open?'absolute z-20 flex bg-gray-200  flex-col top-[20%] right-[10%] ph:w-[250px] md:w-[310px] h-[230px]':'hidden']">
     <div class="w-full has h-[80%] flex flex-col justify-center items-center">
         <div><img :src="img2"></div>
         <div class="text-white">User Name</div>
@@ -14,29 +14,29 @@
 </div>
   <div class="w-full h-full">
       <div class="w-full flex justify-center items-center h-[200px] top-0 hass">
-          <div class="flex flex-row justify-between w-[80%] items-center">
-              <div class="w-[200px]">
+          <div class="flex flex-row justify-between sm:w-[90%] md:w-[80%] ph:w-[95%]  items-center">
+              <div class="ph:w-[21%] sm:w-[25%] md:w-[30%]">
                   <img :src="img">
               </div>
-              <div class="w-[45%] flex flex-row items-center text-white text-xl">
-                  <div class="mx-4"><a class="cursor-pointer">Home</a></div>
-                  <div class="mx-4"><a class="cursor-pointer">Transactions</a></div>
-                  <div class="flex flex-row items-center mx-4">
-                      <div><img @click="opens()" :src="img2"></div>
+              <div class="ph:w-[72%] tp:w-[65%] sm:w-[50%] md:w-[38%] flex flex-row items-center text-white text-xl">
+                  <div class="ph:mx-1 sm:mx-3 md:mx-4 md:text-xl ph:text-sm"><a href="/home" class="cursor-pointer">Home</a></div>
+                  <div class="ph:mx-3 sm:mx-3 md:mx-4 md:text-xl ph:text-sm"><a href="/transaction" class="cursor-pointer">Transactions</a></div>
+                  <div class="flex flex-row items-center ph:mx-1 sm:mx-3 md:mx-4 md:text-xl ph:text-sm">
+                      <div class="ph:w-[40px] md:w-[60px]"><img @click="opens()" :src="img2"></div>
                       <div class="mx-2"><a>Username</a></div>
                   </div>
               </div>
           </div>
       </div>
 
-      <div class="w-full h-[700px] bg-gray-100 flex justify-center items-center">
-          <div class="w-[45%] h-[65%] bg-white">
+      <div class="w-full ph:h-[500px] md:h-[700px] bg-gray-100 flex justify-center items-center">
+          <div class="ph:w-[80%] md:w-[45%] h-[65%] bg-white">
               <div class="p-4 flex flex-col justify-center">
                   <div class="flex flex-col justify-center">
-                      <div class="flex justify-center items-center my-4"><img class=" w-[200px] h-[200px]" :src="img3"></div>
-                      <div class="flex justify-center drop-shadow-md shadow-black text-2xl font-bold my-4">User Name</div>
+                      <div class="flex justify-center items-center my-4"><img class="ph:w-[100px] md:w-[200px] ph:h-[100px] md:h-[200px]" :src="img3"></div>
+                      <div class="flex justify-center drop-shadow-md shadow-black ph:text-xl md:text-2xl font-bold my-4">User Name</div>
                   </div>
-                  <div class="flex justify-center text-2xl drop-shadow-md shadow-black font-bold my-4">Balance: 5$ Bitcoins</div>
+                  <div class="flex justify-center ph:text-xl md:text-2xl drop-shadow-md shadow-black font-bold my-4">Balance: 5$ Bitcoins</div>
               </div>
 
           </div>
