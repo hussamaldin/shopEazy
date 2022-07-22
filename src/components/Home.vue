@@ -1,6 +1,13 @@
 <template>
-<div @click="greet" :class="[open?'w-full h-full fixed z-10 overflow-y-auto bg-opacity-50 bg-gray-600':'hidden']">
-
+<div @click="greet" :class="[open?'w-full flex justify-center items-center h-full fixed z-10 overflow-y-auto bg-opacity-50 bg-gray-600':'hidden']">
+               <div v-if="ride" class="" role="status">
+    <svg aria-hidden="true" class="mr-2 w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="blue" xmlns="http://www.w3.org/2000/svg">
+        <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+        <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+    </svg>
+    <span class="sr-only">Loading...</span>
+</div>
+<div v-else></div>
 </div>
 <div @click="greett" :class="[openn?'w-full h-full fixed z-10 overflow-y-auto bg-opacity-50 bg-gray-600':'hidden']">
 
@@ -19,12 +26,12 @@
 <div :class="[options?'bg-gray-50 p-4 z-20 absolute ph:top-[10%] md:top-[10%] md:right-[33%] ph:right-[4%] ph:h-[250px] md:h-[400px] ph:w-[92%] md:w-[450px]':'hidden' ]">
     <div class="absolute ph:top-[10px] md:top-[30px] ph:right-[10px] md:right-[30px]"><i @click="cloop" class="fa fa-close"></i></div>
 <div class="flex justify-center ph:my-[20px] md:my-[50px]"><p class="ph:text-sm md:text-4xl">What do You want to do</p></div>
-<div class="flex justify-center ph:my-[20px] md:my-[50px]"><buttom @click="sen" class="bg-hussam rounded-lg text-center p-1 text-white ph:w-[130px] md:w-[150px]">Send Mony</buttom></div>
+<div class="flex justify-center ph:my-[20px] md:my-[50px]"><buttom @click="sen" class="bg-hussam cursor-pointer hover:bg-opacity-90 rounded-lg text-center p-1 text-white ph:w-[130px] md:w-[150px]">Send Mony</buttom></div>
 <div class="flex justify-center ph:my-[20px] md:my-[50px] flex-row items-center"><hr class="h-4 w-[50px]"><p class="ph:text-sm md:text-xl mx-2">OR</p><hr class="h-4 w-[50px]"></div>
-<div class="flex justify-center ph:my-[20px] md:my-[50px]"><buttom @click="che" class="bg-hussam text-center rounded-lg p-1 text-white ph:w-[130px] md:w-[150px]">Check Balance</buttom></div>
+<div class="flex justify-center ph:my-[20px] md:my-[50px]"><buttom @click="che" class="bg-hussam cursor-pointer hover:bg-opacity-90 text-center rounded-lg p-1 text-white ph:w-[130px] md:w-[150px]">Check Balance</buttom></div>
 </div>
 
-<div :class="[check?'bg-gray-50 p-4 z-20 absolute ph:top-[10%] md:top-[10%] md:right-[33%] ph:right-[4%] ph:h-[150px] md:h-[400px] ph:w-[92%] md:w-[450px]':'hidden' ]">
+<div :class="[check?'bg-gray-50 p-4 z-20 absolute ph:top-[10%] md:top-[15%] md:right-[33%] ph:right-[4%] ph:h-[150px] md:h-[250px] ph:w-[92%] md:w-[450px]':'hidden' ]">
     <div class="absolute ph:top-[10px] md:top-[30px] ph:right-[10px] md:right-[30px]"><i @click="cloch" class="fa fa-close"></i></div>
 <div class="flex justify-center ph:my-[20px] md:my-[50px]"><p class="ph:text-2xl md:text-4xl">OX has <span class="text-red-300">5$</span> Bitcoins</p></div>
 
@@ -34,7 +41,7 @@
     <div class="absolute ph:top-[10px] md:top-[30px] ph:right-[10px] md:right-[30px]"><i @click="close" class="fa fa-close text-xl"></i></div>
 <div class="flex justify-center ph:my-[20px] md:my-[50px]"><p class="md:text-xl text-4xl">Send mony</p></div>
 <div class="flex justify-center ph:my-[20px] md:my-[50px]"><input type="text rounded-lg" class="w-[300px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block  pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" placeholder="Enter Amount"></div>
-<div class="flex justify-center ph:my-[20px] md:my-[50px]"><buttom @click="succ" class="bg-hussam text-center rounded-xl p-1 text-white w-[150px]">Send</buttom></div>
+<div class="flex justify-center ph:my-[20px] md:my-[50px]"><buttom @click="succ" class="bg-hussam cursor-pointer hover:bg-opacity-90 text-center rounded-xl p-1 text-white w-[150px]">Send</buttom></div>
 </div>
 
 <div :class="[success?'bg-gray-50 p-4 z-20 absolute ph:top-[10%] md:top-[10%] md:right-[33%] ph:right-[4%] ph:h-[300px] md:h-[400px] ph:w-[92%] md:w-[450px]':'hidden' ]">
@@ -43,7 +50,7 @@
 <div class="flex justify-center  ph:my-[20px] md:my-[30px]"><p class="ph:text-2xl md:text-4xl">Thank You</p></div>
 
 <div class="flex justify-center ph:my-[20px] md:my-[30px]"><p>Your request to send money has been sent successfully</p></div>
-<div class="flex justify-center ph:my-[20px] md:my-[30px]"><buttom @click="closuc" class="bg-hussam text-center rounded-lg p-1 text-white w-[150px]">Ok</buttom></div>
+<div class="flex justify-center ph:my-[20px] md:my-[30px]"><buttom @click="closuc" class="bg-hussam cursor-pointer hover:bg-opacity-90 text-center rounded-lg p-1 text-white w-[150px]">Ok</buttom></div>
 </div>
 
   <div class="w-full  h-[680px] has relative flex flex-col justify-center items-center">
@@ -88,7 +95,7 @@
                       <div class="flex justify-center my-4"><p>OX</p></div>
                   </div>
                   
-                  
+
               </div>
           </div>
       </div>
@@ -98,6 +105,7 @@
 export default {
 data(){
     return{
+        ride:false,
         openn:false,
         open:false,
         options:false,
@@ -141,19 +149,45 @@ this.options= !this.options
     },
     che(){
 this.options= !this.options
+        this.ride= !this.ride
+              setTimeout(() => {
 this.check= !this.check
+        this.ride= !this.ride
+      }, 1500);
+
     },
     sen(){
         this.options= !this.options
+        this.ride= !this.ride
+              setTimeout(() => {
         this.send= !this.send
+        this.ride= !this.ride
+      }, 1500);
+        
     },
     succ(){
 this.send= !this.send
+        this.ride= !this.ride
+              setTimeout(() => {
 this.success= !this.success
+        this.ride= !this.ride
+      }, 1500);
+
     },
 greet(){
 this.open= !this.open
-this.options= !this.options
+if(this.options == true){
+    this.options=false
+}
+if(this.check == true){
+    this.check=false
+}
+if(this.send == true){
+    this.send=false
+}
+if(this.success == true){
+    this.success=false
+}
 },
 greett(){
 this.openn= !this.openn
@@ -162,9 +196,7 @@ this.openn= !this.openn
 opens(){
     this.openn= !this.openn
 },
-opti(){
-    this.options= !this.options
-},
+
 
 }
 }
